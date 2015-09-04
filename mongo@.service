@@ -11,7 +11,7 @@ TimeoutStartSec=0
 TimeoutStopSec=360
 EnvironmentFile=/etc/environment
 Environment=INSTANCE=%i
-ExecStartPre=/bin/bash -c "/usr/bin/docker pull mongo:2.6"
+ExecStartPre=/bin/bash -c "/usr/bin/docker pull mongo:3.1"
 ExecStartPre=-/bin/bash -c "/usr/bin/docker rm -f mongodb"
 ExecStart=/bin/bash -c "\
           set -e; \
